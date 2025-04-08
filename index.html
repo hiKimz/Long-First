@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long First</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>LONG FIRST Stock Control</h1>
+
+    <div id="info-autofill-div">
+        <span id="autofill-text">Brochure No. <span id="autofill-bnum">1000</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Date: <span id="autofill-date">Jan 1, 1970</span>
+    </span>
+    </div>
+
+    <div id="page-buttons-div">
+        <button onclick="infoTab()">Info</button>
+        <button onclick="searchTab()">Cart</button>
+    </div>
+
+    <br>
+
+    <!-- <div id="info-controls-div">
+        Name: <input type="text" name="" id="name-box"> &nbsp;&nbsp;&nbsp;
+        Address: <input type="text" name="" id="address-box"> &nbsp;&nbsp;&nbsp;
+        Telephone: <input type="text" name="" id="telephone-box"> &nbsp;&nbsp;&nbsp;
+    </div> -->
+
+
+    <div id="info-page" style="display: Inline;">
+
+        <table id="info-form-table">
+            <tr>
+                <td style="width: 12vw;">Name: </td>
+                <td><input type="text" name="" id="name-box"></td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><textarea id="address-box"></textarea></td>
+            </tr>
+            <tr>
+                <td>Telephone: </td>
+                <td><input type="text" name="" id="telephone-box" value="09-"></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>Cash: </td>
+                <td><input type="text" name="" id="cash-box">&nbsp;&nbsp;&nbsp;<button id="cash-copy" onclick="copyToCash()">Copy</button></td>
+            </tr>
+            </tr>
+                <td>Online: </td>
+                <td><input type="text" name="" id="online-box">&nbsp;&nbsp;&nbsp;<button id="online-copy" onclick="copyToOnline()">Copy</button></td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+
+    <div id="search-page" style="display: None;">
+
+        <div id="search-controls-div">
+            SEARCH: <input type="text" name="" id="search-box">
+            <!-- <button onclick="clearSearchBox()" id="clear-button">&#128938;</button> -->
+        </div>
+
+        <br>
+
+
+
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 3vw;">Id.</th>
+                    <th style="width: 20vw;">Name</th>
+                    <th style="width: 5vw;">Unit</th>
+                    <th  style="width: 6vw;">Rate</th>
+                    <th style="width: 3vw;"></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+        <div id="right-side-div">
+            <h3 id="cart-title">Cart</h3>
+
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th style="width: 2.5vw;">Id.</th>
+                        <th style="width: 17vw;">Name</th>
+                        <th style="width: 10vw;">Rate</th>
+                        <th style="width: 4vw;">Qty</th>
+                        <th style="width: 6vw;">Price</th>
+                        <th style="width: 9vw;">Ctrls.</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+
+        </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
