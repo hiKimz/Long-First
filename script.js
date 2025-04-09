@@ -126,6 +126,8 @@ function searchData(searchTerm){
 
             }
         });
+
+        addFuncToButtons()
 }
 
 
@@ -446,6 +448,8 @@ function resetCart(cart){
     finalRow.append(finalCell)
 
     tableBody.appendChild(finalRow)
+
+    addFuncToButtons()
 }
 
 // Call the fetchData function when the page loads
