@@ -12,7 +12,7 @@
     <h1>LONG FIRST Stock Control</h1>
 
     <div id="info-autofill-div">
-        <span id="autofill-text">Brochure No. <span id="autofill-bnum">1000</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span id="autofill-text">Recepit No. <span id="autofill-bnum">1000</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         Date: <span id="autofill-date">Jan 1, 1970</span>
     </span>
     </div>
@@ -49,11 +49,26 @@
             <tr></tr>
             <tr>
                 <td>Cash: </td>
-                <td><input type="text" name="" id="cash-box">&nbsp;&nbsp;&nbsp;<button id="cash-copy" onclick="clearoCash()">Copy</button>&nbsp;&nbsp;&nbsp;<button id="cash-cclear" onclick="copyToCash()">Clear</button></td>
+                <td><input type="text" name="" id="cash-box">&nbsp;&nbsp;&nbsp;<button id="cash-copy" class="info-button" onclick="copyToCash()">Copy</button>&nbsp;&nbsp;&nbsp;<button id="cash-clear" class="info-button" onclick="clearCash()">Clear</button></td>
             </tr>
             </tr>
                 <td>Online: </td>
-                <td><input type="text" name="" id="online-box">&nbsp;&nbsp;&nbsp;<button id="online-copy" onclick="copyToOnline()">Copy</button>&nbsp;&nbsp;&nbsp;<button id="online-clear" onclick="copyToCash()">Clear</button></td>
+                <td><input type="text" name="" id="online-box">&nbsp;&nbsp;&nbsp;<button id="online-copy" class="info-button" onclick="copyToOnline()">Copy</button>&nbsp;&nbsp;&nbsp;<button id="online-clear" class="info-button" onclick="clearOnline()">Clear</button></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>Extras</td>
+                <td><input type="text" name="" id="extras-reason-box" placeholder="reason">&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="" id="extras-box">&nbsp;&nbsp;&nbsp;
+                    <button id="extras-taxi" class="info-button" onclick="extraTaxi()">Taxi</button>&nbsp;&nbsp;&nbsp;
+                    <button id="extras-clear" class="info-button" onclick="clearExtras()">Clear</button></td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td><input type="text" name="" id="discount-reason-box" placeholder="reason">&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="" id="discount-box">&nbsp;&nbsp;&nbsp;
+                    <button id="extras-taxi" class="info-button" onclick="extraTaxi()">Taxi</button>&nbsp;&nbsp;&nbsp;
+                    <button id="discount-clear" class="info-button" onclick="clearDiscount()">Clear</button></td>
             </tr>
         </table>
 

@@ -1,5 +1,5 @@
 // The URL to the CSV file from the published Google Sheet
-const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT7zTCpGkp7Qdk_9rhQQ7B9IJu479JBdfSVmJAwGcZL3phhdVLhq9SnXDmx42xM0IDZPkxzarnL2hJp/pub?output=csv'; // Replace with your CSV URL
+const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT7zTCpGkp7Qdk_9rhQQ7B9IJu479JBdfSVmJAwGcZL3phhdVLhq9SnXDmx42xM0IDZPkxzarnL2hJp/pub?output=csv'; 
 
 dataArray = []
 
@@ -9,6 +9,8 @@ let netPrice = 0
 
 const warningColor = '#ff2a2a'
 const borderColor = '#8da2be'
+
+const taxiPrice = 4000
 
 // HELPER: Change to title case
 function toTitleCase(str) {
@@ -261,6 +263,41 @@ function copyToOnline() {
     updatePayment()
 }
 
+function clearCash() {
+    cashBox.value = ''
+    updatePayment()
+}
+
+function clearOnline() {
+    onlineBox.value = ''
+    updatePayment()
+}
+
+
+extrasBox = document.getElementById('extras-box')
+discountBox = document.getElementById('discount-box')
+
+extrasReasonBox = document.getElementById('extras-reason-box')
+discountReasonBox = document.getElementById('discount-reason-box')
+
+function extraTaxi() {
+    extrasReasonBox.value = 'Taxi'
+    extrasBox.value = taxiPrice
+}
+
+function clearExtras() {
+    extrasReasonBox.value = ''
+    extrasBox.value = ''
+    updatePayment()
+}
+
+function clearDiscount() {
+    discountReasonBox.value = ''
+    discountBox.value = ''
+    updatePayment()
+}
+
+
 function updatePayment() {
     cashValue = parseFloat(cashBox.value)
     onlineValue = parseFloat(onlineBox.value)
@@ -294,7 +331,9 @@ function manageCart(id, mode = 'add') {
     if (!hasItem && mode == 'subtract') {
         subtractItemFromCart(id)
     } else if (!hasItem) {
-        addItemToCart(id)
+        if (cart.length <= 9) {
+            addItemToCart(id)
+        }
     }
 
 }
